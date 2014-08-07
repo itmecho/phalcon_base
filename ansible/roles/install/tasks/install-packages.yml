@@ -4,6 +4,7 @@
   with_items:
   - gcc
   - make
+  - git
   - libpcre3-dev
   - nginx
   - php5-fpm
