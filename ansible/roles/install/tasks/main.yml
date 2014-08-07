@@ -1,0 +1,3 @@
+---
+- include: install-packages.yml tags=install-packages
+- include: configure-packages.yml tags=configure-packages
