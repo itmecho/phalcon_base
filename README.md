@@ -41,10 +41,10 @@ sudo apt-get install ansible
 
 ## First time run
 
-After installing the dependencies listed above, cd into the base_phalcon directory and tell vagrant to start the box creation process
+After installing the dependencies listed above, cd into the phalcon_base directory and tell vagrant to start the box creation process
 
 ````bash
-cd /var/www/base_phalcon
+cd /var/www/phalcon_base
 vagrant up
 ````
 
