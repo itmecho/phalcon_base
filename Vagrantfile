@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		v.memory = 1024
 	end
 
-	config.vm.network :public_network
+    config.vm.network "forwarded_port", guest: 80, host: 8080
 	config.vm.synced_folder "./htdocs", "/srv/www/htdocs"
 
 	config.vm.provision "ansible" do |ansible|
