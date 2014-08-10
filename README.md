@@ -52,14 +52,7 @@ Vagrant will now proceed to download the Ubuntu 14.04 32bit image and create a V
 
 When the playbook has finished (hopefully with no errors), the box will be ready to go! The htdocs folder will be synced to the box so you just have to start working on your local machine and the changes will automatically appear on the server.
 
-To get the IP of the vagrant box, use the following commands to ssh into the box and then get the interface configurations
-
-````bash
-vagrant ssh
-ifconfig
-````
-
-Now just type the IP into your browser and you should be greeted by your new Phalcon Application!
+To see your new vagrant box running, got to [http://localhost:8080/](http://localhost:8080/) in your browser. Port 80 on the Vagrant box has been forwarded to port 8080 on your computer for easy access.
 
 ---
 
