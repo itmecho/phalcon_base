@@ -44,7 +44,7 @@ sudo apt-get install ansible
 After installing the dependencies listed above, cd into the phalcon_base directory and tell vagrant to start the box creation process
 
 ````bash
-cd /var/www/phalcon_base
+cd phalcon_base
 vagrant up
 ````
 
