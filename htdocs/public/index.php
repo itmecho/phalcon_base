@@ -5,11 +5,13 @@ try{
     //Read config from ini files
     $config = new \Phalcon\Config\Adapter\Ini("../app/config/application.config.ini");
     $err_config = new \Phalcon\Config\Adapter\Ini("../app/config/error.config.ini");
+    $conn_config = new \Phalcon\Config\Adapter\Ini("../app/config/connection.config.ini");
 
     //Merge into one usable config
     $config->merge($err_config);
+    $config->merge($conn_config);
 
-    //Display Errors
+    //Display errors if config is set to true
     if($config->error->display) {
         ini_set("display_errors", 1);
         error_reporting(E_ALL);
@@ -27,9 +29,21 @@ try{
     //Initialze DI
     $di = new \Phalcon\DI\FactoryDefault();
 
+    //Make the config available throughout MVC
     $di->setShared("config", function() use ($config){
         return $config;
     });
+
+    //Example DB connection (MySQL)
+    /*$di->set("db", function() use ($config) {
+        $db = new Phalcon\Db\Adapter\Pdo\Mysql(array(
+            "host" => $config->database->host,
+            "username" => $config->database->username,
+            "password" => $config->database->password,
+            "dbname" => $config->database->dbname,
+        ));
+        return $db;
+    });*/
 
     //Setup view component
     $di->set("view", function() use ($config) {
