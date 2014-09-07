@@ -15,5 +15,5 @@
 - name: Clone Phalcon
   git: repo=git://github.com/phalcon/cphalcon.git dest=/tmp/phalcon_repo depth=1 accept_hostkey=yes
 
-- name: Install Phalcon
+- name: Build and Install Phalcon
   shell: cd /tmp/phalcon_repo/build && ./install
