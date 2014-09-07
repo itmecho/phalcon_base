@@ -8,6 +8,9 @@ class IndexController extends ControllerBase
 
         Phalcon\Tag::appendTitle("Home");
 
+        $this->assets->addCss("css/extra.css");
+        $this->assets->addJs("js/extra.js");
+
     }
 
 }
