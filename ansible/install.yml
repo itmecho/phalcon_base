@@ -1,5 +1,5 @@
 ---
-- name: Provision box with Nginx, PHP5, MySQL and Phalcon
+- name: Provision VM for Phalcon
   hosts: default
   user: vagrant
   sudo: True

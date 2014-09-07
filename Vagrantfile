@@ -6,6 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.box_url = "ubuntu/trusty32"
 
 	config.vm.provider "virtualbox" do |v|
+	    v.name = "Phalcon"
 		v.memory = 1024
 	end
 

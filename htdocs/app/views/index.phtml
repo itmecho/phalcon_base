@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-    <meta charset="utf-8" >
-    <title>::Phalcon Base</title>
-</head>
 
+    <meta charset="utf-8" >
+    <?=Phalcon\Tag::getTitle()?>
+    <?=Phalcon\Tag::stylesheetLink("css/style.css")?>
+    <?php $this->assets->outputCss() ?>
+
+</head>
 <body>
 
-<?php
-echo $this->getContent();
-?>
+    <?=$this->getContent()?>
+
+    <?=Phalcon\Tag::javascriptInclude("js/script.js")?>
+    <?php $this->assets->outputJs() ?>
 
 </body>
-
 </html>
 
