@@ -1,12 +1,12 @@
 <?php
 
-class Controller extends \Phalcon\Mvc\Controller
+class ControllerBase extends \Phalcon\Mvc\Controller
 {
 
     public function initialize()
     {
 
-
+        Phalcon\Tag::prependTitle("APP_NAME - ");
 
     }
 

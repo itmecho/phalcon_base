@@ -1,12 +1,12 @@
 <?php
 
-class IndexController extends Controller
+class IndexController extends ControllerBase
 {
 
     public function indexAction()
     {
 
-
+        Phalcon\Tag::appendTitle("Home");
 
     }
 
